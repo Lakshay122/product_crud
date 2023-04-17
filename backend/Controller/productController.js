@@ -41,7 +41,7 @@ exports.addProduct = catchAsyncError(async (req, res, next) => {
       file.tempFilePath,
       { folder: "ProductImages" },
       async (err, result) => {
-        console.log(err)
+       
         if (err) return next(new ErrorHander(err, 400));
         console.log(result);
         removeTmp(file.tempFilePath);
